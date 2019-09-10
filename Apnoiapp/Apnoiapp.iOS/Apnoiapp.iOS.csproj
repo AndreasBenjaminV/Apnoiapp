@@ -141,4 +141,37 @@
       <Name>Apnoiapp</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\login_buttons\face_block.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\login_buttons\google_plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\login_buttons\twitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\AppIcon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\AppIcon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\clavado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\clavado2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\finswimming3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\mariposaagualogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Medusa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\megalodon.PNG" />
+  </ItemGroup>
 </Project>
