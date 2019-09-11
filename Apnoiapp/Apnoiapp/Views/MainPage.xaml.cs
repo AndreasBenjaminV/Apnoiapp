@@ -29,6 +29,9 @@ namespace Apnoiapp.Views
                     case (int)MenuItemType.Home:
                         MenuPages.Add(id, new NavigationPage(new HomePage()));
                         break;
+                    case (int)MenuItemType.ClassSchedule:
+                        MenuPages.Add(id, new NavigationPage(new ClassSchedulePage()));
+                        break;
                     case (int)MenuItemType.Browse:
                         MenuPages.Add(id, new NavigationPage(new ItemsPage()));
                         break;

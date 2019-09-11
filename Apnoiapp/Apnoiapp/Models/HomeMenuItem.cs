@@ -7,6 +7,7 @@ namespace Apnoiapp.Models
     public enum MenuItemType
     {
         Home,
+        ClassSchedule,
         Browse,
         About
     }
