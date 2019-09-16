@@ -69,6 +69,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\UrgentBrush.ttf" />
+    <AndroidAsset Include="Assets\Lemon-Brush.otf" />
+    <AndroidAsset Include="Assets\HARDCORE-POSTER.otf" />
+    <AndroidAsset Include="Assets\Destone.otf" />
+    <AndroidAsset Include="Assets\Brightland.ttf" />
+    <AndroidAsset Include="Assets\Eudora.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
@@ -114,13 +120,13 @@
     <AndroidResource Include="Resources\drawable\megalodon.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\login_buttons\face_block.PNG" />
+    <AndroidResource Include="Resources\drawable\face_block.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\login_buttons\google_plus.png" />
+    <AndroidResource Include="Resources\drawable\google_plus.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\login_buttons\twitter.png" />
+    <AndroidResource Include="Resources\drawable\twitter.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\AppIcon1.png" />

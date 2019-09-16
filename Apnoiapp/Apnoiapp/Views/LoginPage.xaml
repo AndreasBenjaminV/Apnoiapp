@@ -8,29 +8,35 @@
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="20*"/>
-                        <RowDefinition Height="15*"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="35*"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
                     <Frame Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="Black" BorderColor="White" CornerRadius="100">
                         <Image Source="finswimming3.png" WidthRequest="80"/>
                     </Frame>
-                    <Label Grid.Row="1" Text="¡ Bienvenido a Apnoiapp !" 
-                       TextColor="White" FontSize="20" FontAttributes="Bold"
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="CenterAndExpand" />
-                    <Label Grid.Row="2" Text="Las inscripciónes para 5to Campeonato de natación con aletas ya se encuentran abiertas." 
-                       TextColor="Wheat" FontSize="Medium" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
-                    <Label Grid.Row="3" Text="El plazo máximo de inscripción es hasta el 29 de mayo 2019" 
-                       TextColor="OrangeRed" FontSize="Small" FontAttributes="Italic" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
-                    <!--<Entry Placeholder="Ingrese Usuario" TextColor="White" PlaceholderColor="White"/>
-                    <Entry Placeholder="Ingrese Contraseña" TextColor="White" PlaceholderColor="White"/>-->
-                    <Button Grid.Row="4" BackgroundColor="#4267b2" CornerRadius="30" Text="Inscripción 5to Camp. Natacion con Aletas" TextColor="White" Command="{Binding LoginCommand}"/>
-                    <!--<Button Image="login_buttons/face_block.PNG" BackgroundColor="#4267b2" HeightRequest="40" CornerRadius="30" Text="Iniciar sesión con Facebook" TextColor="White" Command="{Binding LoginCommand}"/>
-                    <Button Image="twitter.png" BackgroundColor="#26a6d1" HeightRequest="40" CornerRadius="30" Text="Iniciar sesión con Twitter" TextColor="White" Command="{Binding RegisterCommand}"/>
-                    <Button Image="google_plus.png" BackgroundColor="#dd4b39" HeightRequest="40" CornerRadius="30" Text="Iniciar sesión con Google" TextColor="White"/>-->
+                    
+                    <StackLayout Grid.Row="1" VerticalOptions="CenterAndExpand">
+                        <Label Text="Bienvenidos a "
+                           TextColor="White"
+                           
+                           HorizontalOptions="Center"></Label>
+                        <Label Grid.Row="2" Text=" Apnoiapp "
+                               TextColor="White" FontSize="60" 
+                               VerticalOptions="CenterAndExpand" 
+                               HorizontalOptions="CenterAndExpand">
+                            <Label.FontFamily>
+                                <OnPlatform Android="Brightland.ttf#Brightland"></OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="2" VerticalOptions="CenterAndExpand">
+                        <Button Image="face_block.PNG" BackgroundColor="#4267b2" HeightRequest="40" CornerRadius="30" Text="Iniciar sesión con Facebook" TextColor="White" Command="{Binding LoginCommand}"/>
+                        <Button Image="twitter.png" BackgroundColor="#26a6d1" HeightRequest="40" CornerRadius="30" Text="Iniciar sesión con Twitter" TextColor="White"/>
+                        <Button Image="google_plus.png" BackgroundColor="#dd4b39" HeightRequest="40" CornerRadius="30" Text="Iniciar sesión con Google" TextColor="White"/>
+                    </StackLayout>
+
                 </Grid>
             </Frame>
         </StackLayout>
