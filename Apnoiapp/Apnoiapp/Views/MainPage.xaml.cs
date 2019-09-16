@@ -17,7 +17,7 @@ namespace Apnoiapp.Views
 
             MasterBehavior = MasterBehavior.Popover;
 
-            MenuPages.Add((int)MenuItemType.Browse, (Page)Detail);
+            MenuPages.Add((int)MenuItemType.Home, (Page)Detail);
         }
 
         public async Task NavigateFromMenu(int id)
@@ -31,6 +31,9 @@ namespace Apnoiapp.Views
                         break;
                     case (int)MenuItemType.ClassSchedule:
                         MenuPages.Add(id, new ClassSchedulePage());
+                        break;
+                    case (int)MenuItemType.Events:
+                        MenuPages.Add(id, new EventsPage());
                         break;
                 }
             }

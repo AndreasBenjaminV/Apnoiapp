@@ -19,7 +19,8 @@ namespace Apnoiapp.Views
             menuItems = new List<HomeMenuItem>
             {
                 new HomeMenuItem {Id = MenuItemType.Home, Title="Home" },
-                new HomeMenuItem {Id = MenuItemType.ClassSchedule, Title="Horario de Clases" }
+                new HomeMenuItem {Id = MenuItemType.ClassSchedule, Title="Horario de Clases" },
+                new HomeMenuItem {Id = MenuItemType.Events, Title="Eventos" }
             };
 
             ListViewMenu.ItemsSource = menuItems;

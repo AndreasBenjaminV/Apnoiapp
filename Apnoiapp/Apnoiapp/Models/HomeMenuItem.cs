@@ -8,7 +8,7 @@ namespace Apnoiapp.Models
     {
         Home,
         ClassSchedule,
-        Browse,
+        Events,
         About
     }
     public class HomeMenuItem

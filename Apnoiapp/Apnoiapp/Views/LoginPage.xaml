@@ -4,10 +4,10 @@
              x:Class="Apnoiapp.Views.LoginPage" BackgroundImage="Medusa.jpg">
     <ContentPage.Content>
         <StackLayout>
-            <Frame BackgroundColor="#FF041326" Opacity="0.65" VerticalOptions="FillAndExpand" Margin="40,50,40,50" BorderColor="White" CornerRadius="20">
+            <Frame BackgroundColor="#FF041326" Opacity="0.70" VerticalOptions="FillAndExpand" Margin="40,50,40,50" BorderColor="White" CornerRadius="20">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="25*"/>
                         <RowDefinition Height="35*"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
@@ -24,17 +24,14 @@
                         <Label Grid.Row="2" Text=" Apnoiapp "
                                TextColor="White" FontSize="60" 
                                VerticalOptions="CenterAndExpand" 
-                               HorizontalOptions="CenterAndExpand">
-                            <Label.FontFamily>
-                                <OnPlatform Android="Brightland.ttf#Brightland"></OnPlatform>
-                            </Label.FontFamily>
+                               HorizontalOptions="CenterAndExpand" FontFamily="{OnPlatform Android='Brightland.ttf#Brightland'}">
                         </Label>
                     </StackLayout>
 
-                    <StackLayout Grid.Row="2" VerticalOptions="CenterAndExpand">
-                        <Button Image="face_block.PNG" BackgroundColor="#4267b2" HeightRequest="40" CornerRadius="30" Text="Iniciar sesión con Facebook" TextColor="White" Command="{Binding LoginCommand}"/>
-                        <Button Image="twitter.png" BackgroundColor="#26a6d1" HeightRequest="40" CornerRadius="30" Text="Iniciar sesión con Twitter" TextColor="White"/>
-                        <Button Image="google_plus.png" BackgroundColor="#dd4b39" HeightRequest="40" CornerRadius="30" Text="Iniciar sesión con Google" TextColor="White"/>
+                    <StackLayout Grid.Row="2" VerticalOptions="FillAndExpand">
+                        <Button Image="face_block.PNG" BackgroundColor="#4267b2" FontSize="Micro" CornerRadius="30" Text="Iniciar sesión con Facebook" TextColor="White" Command="{Binding LoginCommand}"/>
+                        <Button Image="twitter.png" BackgroundColor="#26a6d1" FontSize="Micro" CornerRadius="30" Text="Iniciar sesión con Twitter" TextColor="White"/>
+                        <Button Image="google_plus.png" BackgroundColor="#dd4b39" FontSize="Micro" CornerRadius="30" Text="Iniciar sesión con Google" TextColor="White"/>
                     </StackLayout>
 
                 </Grid>

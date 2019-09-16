@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Apnoiapp.Views.EventsPage" Title="Próximos Eventos" BackgroundImageSource="megalodon.png">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50*"/>
+                        <ColumnDefinition Width="50*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Frame Grid.Column="0"  
+                           HeightRequest="240"
+                           VerticalOptions="FillAndExpand" 
+                           HorizontalOptions="FillAndExpand" 
+                           CornerRadius="10"
+                           BackgroundColor="#FF041326" 
+                           Opacity="0.75" 
+                           BorderColor="White">
+                        <StackLayout HorizontalOptions="Center">
+                            <Frame VerticalOptions="Start" HorizontalOptions="Center" 
+                                   BackgroundColor="White" BorderColor="White" 
+                                   WidthRequest="40" HeightRequest="40" CornerRadius="50">
+                                <Image Source="mariposaagualogo.png"/>
+                            </Frame>
+
+                            <Label Text="5to Campeonato Nacional Idoor Natación con Aletas"
+                                   TextColor="White"
+                                   HorizontalOptions="Center"
+                                   HorizontalTextAlignment="Center"/>
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label Text="Fecha: "
+                                       TextColor="DarkGray"
+                                       HorizontalOptions="FillAndExpand"
+                                       FontSize="Caption"/>
+
+                                <Label Text="25/11/2019"
+                                       TextColor="DarkGray"
+                                       HorizontalOptions="Center"
+                                       FontSize="Caption"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label Text="Lugar: "
+                                       TextColor="DarkGray"
+                                       HorizontalOptions="FillAndExpand"
+                                       FontSize="Caption"/>
+
+                                <Label Text="Estadio Nacional"
+                                       TextColor="DarkGray"
+                                       HorizontalOptions="Center"
+                                       FontSize="Caption"/>
+                            </StackLayout>
+
+                            <Button Text="Inscripciones" 
+                                    TextColor="Wheat"
+                                    FontSize="Caption"
+                                    BorderColor="White"
+                                    BorderWidth="1"
+                                    CornerRadius="30"
+                                    BackgroundColor="Transparent"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Grid.Column="1"  
+                           HeightRequest="240"
+                           VerticalOptions="FillAndExpand" 
+                           HorizontalOptions="FillAndExpand" 
+                           CornerRadius="10"
+                           BackgroundColor="#FF041326" 
+                           Opacity="0.75" 
+                           BorderColor="White">
+                        <StackLayout HorizontalOptions="Center">
+                            <Frame VerticalOptions="Start" HorizontalOptions="Center" 
+                                   BackgroundColor="White" BorderColor="White" 
+                                   WidthRequest="40" HeightRequest="40" CornerRadius="50">
+                                <Image Source="mariposaagualogo.png"/>
+                            </Frame>
+
+                            <Label Text="5to Campeonato Nacional Idoor Natación con Aletas"
+                                   TextColor="White"
+                                   HorizontalOptions="Center"
+                                   HorizontalTextAlignment="Center"/>
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label Text="Fecha: "
+                                       TextColor="DarkGray"
+                                       HorizontalOptions="FillAndExpand"
+                                       FontSize="Caption"/>
+
+                                <Label Text="25/11/2019"
+                                       TextColor="DarkGray"
+                                       HorizontalOptions="Center"
+                                       FontSize="Caption"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label Text="Lugar: "
+                                       TextColor="DarkGray"
+                                       HorizontalOptions="FillAndExpand"
+                                       FontSize="Caption"/>
+
+                                <Label Text="Estadio Nacional"
+                                       TextColor="DarkGray"
+                                       HorizontalOptions="Center"
+                                       FontSize="Caption"/>
+                            </StackLayout>
+
+                            <Button Text="Inscripciones" 
+                                    TextColor="Wheat"
+                                    FontSize="Caption"
+                                    BorderColor="White"
+                                    BorderWidth="1"
+                                    CornerRadius="30"
+                                    BackgroundColor="Transparent"/>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50*"/>
+                        <ColumnDefinition Width="50*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Frame Grid.Column="0"  
+                           HeightRequest="240"
+                           VerticalOptions="FillAndExpand" 
+                           HorizontalOptions="FillAndExpand" 
+                           CornerRadius="10"
+                           BackgroundColor="#FF041326" 
+                           Opacity="0.75" 
+                           BorderColor="White">
+                        <StackLayout HorizontalOptions="Center">
+                            <Frame VerticalOptions="Start" HorizontalOptions="Center" 
+                                   BackgroundColor="White" BorderColor="White" 
+                                   WidthRequest="40" HeightRequest="40" CornerRadius="50">
+                                <Image Source="mariposaagualogo.png"/>
+                            </Frame>
+
+                            <Label Text="5to Campeonato Nacional Idoor Natación con Aletas"
+                                   TextColor="White"
+                                   HorizontalOptions="Center"
+                                   HorizontalTextAlignment="Center"/>
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label Text="Fecha: "
+                                       TextColor="DarkGray"
+                                       HorizontalOptions="FillAndExpand"
+                                       FontSize="Caption"/>
+
+                                <Label Text="25/11/2019"
+                                       TextColor="DarkGray"
+                                       HorizontalOptions="Center"
+                                       FontSize="Caption"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label Text="Lugar: "
+                                       TextColor="DarkGray"
+                                       HorizontalOptions="FillAndExpand"
+                                       FontSize="Caption"/>
+
+                                <Label Text="Estadio Nacional"
+                                       TextColor="DarkGray"
+                                       HorizontalOptions="Center"
+                                       FontSize="Caption"/>
+                            </StackLayout>
+
+                            <Button Text="Inscripciones" 
+                                    TextColor="Wheat"
+                                    FontSize="Caption"
+                                    BorderColor="White"
+                                    BorderWidth="1"
+                                    CornerRadius="30"
+                                    BackgroundColor="Transparent"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <!--<Frame Grid.Column="1"  
+                           HeightRequest="200"
+                           VerticalOptions="FillAndExpand" 
+                           HorizontalOptions="FillAndExpand" 
+                           CornerRadius="10"
+                           BackgroundColor="#FF041326" 
+                           Opacity="0.75" 
+                           BorderColor="White">
+                    </Frame>-->
+                </Grid>
+            </StackLayout>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>
