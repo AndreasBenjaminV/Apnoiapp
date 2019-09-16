@@ -10,14 +10,14 @@ namespace Apnoiapp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : MasterDetailPage
     {
-        Dictionary<int, NavigationPage> MenuPages = new Dictionary<int, NavigationPage>();
+        Dictionary<int,Page> MenuPages = new Dictionary<int, Page>();
         public MainPage()
         {
             InitializeComponent();
 
             MasterBehavior = MasterBehavior.Popover;
 
-            MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
+            MenuPages.Add((int)MenuItemType.Browse, (Page)Detail);
         }
 
         public async Task NavigateFromMenu(int id)
@@ -27,16 +27,10 @@ namespace Apnoiapp.Views
                 switch (id)
                 {
                     case (int)MenuItemType.Home:
-                        MenuPages.Add(id, new NavigationPage(new HomePage()));
+                        MenuPages.Add(id, new HomePage());
                         break;
                     case (int)MenuItemType.ClassSchedule:
-                        MenuPages.Add(id, new NavigationPage(new ClassSchedulePage()));
-                        break;
-                    case (int)MenuItemType.Browse:
-                        MenuPages.Add(id, new NavigationPage(new ItemsPage()));
-                        break;
-                    case (int)MenuItemType.About:
-                        MenuPages.Add(id, new NavigationPage(new AboutPage()));
+                        MenuPages.Add(id, new ClassSchedulePage());
                         break;
                 }
             }
@@ -45,7 +39,9 @@ namespace Apnoiapp.Views
 
             if (newPage != null && Detail != newPage)
             {
-                Detail = newPage;
+                //Detail = newPage; universal style
+                await Detail.Navigation.PushAsync(newPage);
+                 
 
                 if (Device.RuntimePlatform == Device.Android)
                     await Task.Delay(100);
