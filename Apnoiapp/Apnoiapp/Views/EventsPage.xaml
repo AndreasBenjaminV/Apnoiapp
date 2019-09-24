@@ -69,7 +69,9 @@
                                     BorderColor="White"
                                     BorderWidth="1"
                                     CornerRadius="30"
-                                    BackgroundColor="Transparent"/>
+                                    BackgroundColor="Transparent"
+                                    Command="{Binding FinswimmingRegistrationFormCommand}"
+                                    />
                         </StackLayout>
                     </Frame>
 

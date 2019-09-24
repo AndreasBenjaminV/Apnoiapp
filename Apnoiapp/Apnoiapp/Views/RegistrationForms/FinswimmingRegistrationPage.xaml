@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Apnoiapp.Views.RegistrationForms.FinswimmingRegistrationPage">
+    <ContentPage.Content>
+        <ScrollView VerticalScrollBarVisibility="Default" Margin="10,10,10,0">
+            <StackLayout>
+                <Frame CornerRadius="20" BorderColor="White" BackgroundColor="#FF041326" Opacity="0.8">
+                    <StackLayout>
+                        <Frame CornerRadius="100" WidthRequest="100" HorizontalOptions="Center" VerticalOptions="Center">
+                            <Image Source="mariposaagualogo.png"/>
+                        </Frame>
+
+                        <Label Text="Inscripción 5to Campeonato Nacional Natación con Aletas" TextColor="Wheat" HorizontalTextAlignment="Center"/>
+                        <Label Text="*La categoría será autodeterminada al ingresar tu Edad" TextColor="CornflowerBlue" HorizontalTextAlignment="Center"/>
+                        <!--<Label Text="*Los datos personales serán registrados en tu perfil para que la próxima insripción sea mas sencilla ;)" TextColor="ForestGreen" HorizontalTextAlignment="Center"/>-->
+                    </StackLayout>
+                </Frame>
+                <Frame CornerRadius="20" BorderColor="White" BackgroundColor="#091f3b" Opacity="0.82">
+                    <Grid Padding="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0" Grid.Row="0" Text="Nombres" TextColor="White" FontAttributes="Bold" FontSize="14" VerticalOptions="Center"/>
+                        <Entry Grid.Column="1" Grid.Row="0" Text="{Binding UserName , Mode=TwoWay}" PlaceholderColor="Wheat" TextColor="White"  Placeholder="Ingrese nombres" FontSize="Small" HorizontalOptions="End"/>
+
+                        <Label Grid.Column="0" Grid.Row="1" Text="Apellido Paterno" TextColor="White" FontAttributes="Bold" FontSize="14" VerticalOptions="Center"/>
+                        <Entry Grid.Column="1" Grid.Row="1" Text="{Binding UserFatherName, Mode=TwoWay}"  PlaceholderColor="Wheat" TextColor="White" Placeholder="Ingrese apellido" FontSize="Small" HorizontalOptions="End"/>
+
+                        <Label Grid.Column="0" Grid.Row="2" Text="Apellido Materno" TextColor="White" FontAttributes="Bold" FontSize="14" VerticalOptions="Center"/>
+                        <Entry Grid.Column="1" Grid.Row="2" Text="{Binding UserMatherName, Mode=TwoWay}"  PlaceholderColor="Wheat" TextColor="White" Placeholder="Ingrese apellido" FontSize="Small" HorizontalOptions="End"/>
+
+                        <Label Grid.Column="0" Grid.Row="3" Text="RUT" TextColor="White" FontAttributes="Bold" FontSize="14" VerticalOptions="Center"/>
+                        <Entry Grid.Column="1" Grid.Row="3" Text="{Binding UserRut, Mode=TwoWay}"  PlaceholderColor="Wheat" TextColor="White" Placeholder="Ingrese Rut" FontSize="Small" HorizontalOptions="End"/>
+
+                        <Label Grid.Column="0" Grid.Row="4" Text="Tiene licencia" TextColor="White" FontAttributes="Bold" FontSize="14" VerticalOptions="Center"/>
+                        <StackLayout Grid.Column="1" Grid.Row="4" Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                            <Label  Text="No" TextColor="White" VerticalOptions="Center"/>
+                            <Switch IsToggled="{Binding SwitchLicenceIsEnabled, Mode=TwoWay}"/>
+                            <Label  Text="Sí" TextColor="White" VerticalOptions="Center"/>
+                        </StackLayout>
+
+                        <Label Grid.Column="0" Grid.Row="5" Text="Numero de Licencia" TextColor="White" FontAttributes="Bold" FontSize="14" VerticalOptions="Center"/>
+                        <Entry Grid.Column="1" Grid.Row="5" Text="{Binding UserLicence, Mode=TwoWay}" IsEnabled="{Binding SwitchLicenceIsEnabled}" PlaceholderColor="Wheat" TextColor="White" Placeholder="Ingrese licencia" FontSize="Small" HorizontalOptions="End"/>
+
+                        <Label Grid.Column="0" Grid.Row="6" Text="Talla Polera" TextColor="White" FontAttributes="Bold" FontSize="14" VerticalOptions="Center"/>
+                        <Entry Grid.Column="1" Grid.Row="6" Text="{Binding UserShirtSize, Mode=TwoWay}" PlaceholderColor="Wheat" TextColor="White" Placeholder="Ingrese talla" FontSize="Small" HorizontalOptions="End"/>
+
+                        <Label Grid.Column="0" Grid.Row="7" Text="Edad" TextColor="White" FontAttributes="Bold" FontSize="14" VerticalOptions="Center"/>
+                        <Entry Grid.Column="1" Grid.Row="7" Text="{Binding UserAge, Mode=TwoWay}" PlaceholderColor="Wheat" TextColor="White" Keyboard="Numeric"  Placeholder="Ingrese edad" FontSize="Small" HorizontalOptions="End"/>
+
+                    </Grid>
+                </Frame>
+                <Frame CornerRadius="20" BorderColor="White" BackgroundColor="#091f3b" Opacity="0.85">
+                    <StackLayout>
+                        <Frame CornerRadius="100" OutlineColor="White">
+                            <StackLayout>
+                                <Label Text="Competencias Categoria" FontAttributes="Bold" HorizontalOptions="Center"/>
+                                <Label Text="{Binding UserCategoryLabel}" TextColor="DarkGray" FontAttributes="Bold" HorizontalOptions="Center"/>
+                                <Label Text="Seleccione las competencias en las que desea participar" TextColor="CornflowerBlue" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                        </Frame>
+
+                        <StackLayout>
+
+                            <StackLayout IsVisible="{Binding Switch50ApIsVisible, Mode=TwoWay}" Orientation="Horizontal">
+                                <Label Text="50 Metros Apnea - MonoAleta" TextColor="White" FontAttributes="Bold" FontSize="14" VerticalOptions="Center"/>
+                                <StackLayout Grid.Column="1" Grid.Row="0" Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                    <Label  Text="No" TextColor="Wheat"/>
+                                    <Switch IsToggled="{Binding Switch50Ap, Mode=TwoWay}" />
+                                    <Label  Text="Sí" TextColor="Wheat"/>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout IsVisible="{Binding Switch50BfIsVisible, Mode=TwoWay}" Orientation="Horizontal">
+                                <Label Text="50 Metros - Bi Aletas" TextColor="White" FontAttributes="Bold" FontSize="14" VerticalOptions="Center"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                    <Label  Text="No" TextColor="Wheat"/>
+                                    <Switch OnColor="Accent"  IsToggled="{Binding Switch50Bf, Mode=TwoWay}" />
+                                    <Label  Text="Sí" TextColor="Wheat"/>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout IsVisible="{Binding Switch50SfIsVisible, Mode=TwoWay}" Orientation="Horizontal">
+                                <Label Text="50 Metros - Mono Aleta" TextColor="White" FontAttributes="Bold" FontSize="14" VerticalOptions="Center"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                    <Label  Text="No" TextColor="Wheat"/>
+                                    <Switch IsToggled="{Binding Switch50Sf, Mode=TwoWay}" />
+                                    <Label  Text="Sí" TextColor="Wheat"/>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout IsVisible="{Binding Switch100SfIsVisible, Mode=TwoWay}" Orientation="Horizontal">
+                                <Label Text="100 Metros - Mono Aleta" TextColor="White" FontAttributes="Bold" FontSize="14" VerticalOptions="Center"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                    <Label  Text="No" TextColor="Wheat"/>
+                                    <Switch IsToggled="{Binding Switch100Sf, Mode=TwoWay}" />
+                                    <Label  Text="Sí" TextColor="Wheat"/>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout IsVisible="{Binding Switch100BfIsVisible, Mode=TwoWay}" Orientation="Horizontal">
+                                <Label Text="100 Metros - Bi Aletas" TextColor="White" FontAttributes="Bold" FontSize="14" VerticalOptions="Center"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                    <Label  Text="No" TextColor="Wheat"/>
+                                    <Switch IsToggled="{Binding Switch100Bf, Mode=TwoWay}" />
+                                    <Label  Text="Sí" TextColor="Wheat"/>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout IsVisible="{Binding Switch200SfIsVisible, Mode=TwoWay}" Orientation="Horizontal">
+                                <Label Text="200 Metros - Mono Aleta" TextColor="White" FontAttributes="Bold" FontSize="14" VerticalOptions="Center"/>
+                                <StackLayout Grid.Column="1" Grid.Row="5" Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                    <Label  Text="No" TextColor="Wheat"/>
+                                    <Switch IsToggled="{Binding Switch200Sf, Mode=TwoWay}" />
+                                    <Label  Text="Sí" TextColor="Wheat"/>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout IsVisible="{Binding Switch200BfIsVisible, Mode=TwoWay}" Orientation="Horizontal">
+                                <Label Text="200 Metros - Bi Aletas" TextColor="White" FontAttributes="Bold" FontSize="14" VerticalOptions="Center"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                    <Label  Text="No" TextColor="Wheat"/>
+                                    <Switch IsToggled="{Binding Switch200Bf, Mode=TwoWay}" />
+                                    <Label  Text="Sí" TextColor="Wheat"/>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout IsVisible="{Binding Switch400SfIsVisible, Mode=TwoWay}" Orientation="Horizontal">
+                                <Label Text="400 Metros - Mono Aleta" TextColor="White" FontAttributes="Bold" FontSize="14" VerticalOptions="Center"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                    <Label  Text="No" TextColor="Wheat"/>
+                                    <Switch IsToggled="{Binding Switch400Sf, Mode=TwoWay}" />
+                                    <Label  Text="Sí" TextColor="Wheat"/>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout IsVisible="{Binding Switch800SfIsVisible, Mode=TwoWay}" Orientation="Horizontal">
+                                <Label Text="800 Metros - Mono Aleta" TextColor="White" FontAttributes="Bold" FontSize="14" VerticalOptions="Center"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                    <Label  Text="No" TextColor="Wheat"/>
+                                    <Switch IsToggled="{Binding Switch800Sf, Mode=TwoWay}" />
+                                    <Label  Text="Sí" TextColor="Wheat"/>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout IsVisible="{Binding Switch4x50SfIsVisible, Mode=TwoWay}" Orientation="Horizontal">
+                                <Label Text="4x50 Metros - Mono Aleta" TextColor="White" FontAttributes="Bold" FontSize="14" VerticalOptions="Center"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                    <Label  Text="No" TextColor="Wheat"/>
+                                    <Switch IsToggled="{Binding Switch4x50Sf, Mode=TwoWay}" />
+                                    <Label  Text="Sí" TextColor="Wheat"/>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout IsVisible="{Binding Switch4x100SfIsVisible, Mode=TwoWay}" Orientation="Horizontal">
+                                <Label Text="4x100 Metros - Mono Aleta" TextColor="White" FontAttributes="Bold" FontSize="14" VerticalOptions="Center"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                    <Label  Text="No" TextColor="Wheat"/>
+                                    <Switch IsToggled="{Binding Switch4x100Sf, Mode=TwoWay}" />
+                                    <Label  Text="Sí" TextColor="Wheat"/>
+                                </StackLayout>
+                            </StackLayout>
+
+                        </StackLayout>
+
+                        <!--<AbsoluteLayout IsVisible="{Binding LoadingIsVisible}" HorizontalOptions="Center" VerticalOptions="Center">
+                            <Frame BorderColor="White" CornerRadius="50" BackgroundColor="Black">
+                                <ActivityIndicator x:Name="activity"  
+                                IsRunning="{Binding LoadingIsVisible}"
+                                Color="White"  
+                                BackgroundColor="Transparent"/>
+                            </Frame>
+                        </AbsoluteLayout>-->
+
+                        <Button Text="Finalizar Registro" Command="{Binding FinishCommand}" TextColor="White" BackgroundColor="#0196FF" BorderColor="White" BorderRadius="20" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
