@@ -43,7 +43,7 @@ namespace Apnoiapp.Views
             if (newPage != null && Detail != newPage)
             {
                 //Detail = newPage; universal style
-                await Detail.Navigation.PushAsync(newPage);
+                await Detail.Navigation.PushAsync(newPage); // Mi estilo es hacer root solo el home
                  
 
                 if (Device.RuntimePlatform == Device.Android)

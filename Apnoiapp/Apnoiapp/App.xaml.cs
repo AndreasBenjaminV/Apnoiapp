@@ -8,6 +8,8 @@ namespace Apnoiapp
 {
     public partial class App : Application
     {
+        public MainPage RootPage { get => Application.Current.MainPage as MainPage; }
+
         public App()
         {
             InitializeComponent();

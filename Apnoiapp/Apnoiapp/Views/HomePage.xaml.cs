@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Apnoiapp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,7 @@ namespace Apnoiapp.Views
 		{
 			InitializeComponent ();
 
+            BindingContext = new HomeViewModel();
         }
     }
 }
