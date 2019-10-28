@@ -172,7 +172,7 @@
                                        HorizontalOptions="FillAndExpand"
                                        FontSize="Caption"/>
 
-                                <Label Text="24k/11/2019"
+                                <Label Text="24/11/2019"
                                        TextColor="DarkGray"
                                        HorizontalOptions="Center"
                                        FontSize="Caption"/>

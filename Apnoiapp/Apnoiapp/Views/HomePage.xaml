@@ -3,53 +3,50 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Apnoiapp.Views.HomePage" BackgroundImage="clavado2.jpg" Title="Home">
     <ContentPage.Content>
-        
-        <Grid RowSpacing="15">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="30*"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="20*"/>
-            </Grid.RowDefinitions>
+        <ScrollView>
+            <Grid RowSpacing="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <!--<RowDefinition Height="20*"/>-->
+                </Grid.RowDefinitions>
 
-            <Frame Grid.Row="0" VerticalOptions="FillAndExpand" Margin="30,0" CornerRadius="10" BackgroundColor="#FF041326" Opacity="0.75" BorderColor="White">
-                <StackLayout>
-                    <Frame VerticalOptions="Center" HorizontalOptions="Center" 
+                <Frame Grid.Row="0" VerticalOptions="FillAndExpand" Margin="30,0" CornerRadius="10" BackgroundColor="#FF041326" Opacity="0.75" BorderColor="White">
+                    <StackLayout>
+                        <Frame VerticalOptions="Center" HorizontalOptions="Center" 
                            BackgroundColor="White" BorderColor="White" 
                            WidthRequest="70" HeightRequest="70" CornerRadius="65">
-                        <Image Source="mariposaagualogo.png"/>
-                    </Frame>
+                            <Image Source="mariposaagualogo.png"/>
+                        </Frame>
 
-                    <Label Text=" próximas Clases "
-                       TextColor="White" FontSize="20" 
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="CenterAndExpand" 
-                       FontFamily="{OnPlatform Android='HARDCORE-POSTER.otf#HARDCORE-POSTER'}"/>
-                </StackLayout>
-            </Frame>
-            
-            <Frame Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="30,0,30,0" CornerRadius="10" BackgroundColor="#FF041326" Opacity="0.6" BorderColor="White">
-                <Grid ColumnSpacing="20">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="10"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
+                        <Label Text=" próximas Clases "
+                               TextColor="White" FontSize="20" 
+                               VerticalOptions="CenterAndExpand" 
+                               HorizontalOptions="CenterAndExpand" 
+                               FontFamily="{OnPlatform Android='HARDCORE-POSTER.otf#HARDCORE-POSTER'}"/>
 
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="50*"/>
-                        <ColumnDefinition Width="50*"/>
-                    </Grid.ColumnDefinitions>
+                        <Grid ColumnSpacing="20">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
 
-                    <Label Text="Apnea"
-                           TextColor="White" 
-                           FontAttributes="Bold"
-                           FontSize="Medium"
-                           HorizontalOptions="CenterAndExpand" 
-                           VerticalOptions="Center"
-                           Grid.Row="0" Grid.Column="0"
-                           FontFamily="{OnPlatform Android='Eudora.ttf#Eudora'}"/>
-                    
-                    <Label Text="Natación con Aletas" 
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50*"/>
+                                <ColumnDefinition Width="50*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="Apnea"
+                                   TextColor="White" 
+                                   FontAttributes="Bold"
+                                   FontSize="Medium"
+                                   HorizontalOptions="CenterAndExpand" 
+                                   VerticalOptions="Center"
+                                   Grid.Row="0" Grid.Column="0"
+                                   FontFamily="{OnPlatform Android='Eudora.ttf#Eudora'}"/>
+
+                            <Label Text="Natación con Aletas" 
                            FontSize="Medium"
                            HorizontalTextAlignment="Center"
                            FontAttributes="Bold"
@@ -59,65 +56,65 @@
                            Grid.Row="0" Grid.Column="1"
                           FontFamily="{OnPlatform Android='Eudora.ttf#Eudora'}"/>
 
-                    <StackLayout Grid.Row="2" Grid.Column="0">
-                        <Grid VerticalOptions="FillAndExpand">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
+                            <StackLayout Grid.Row="2" Grid.Column="0">
+                                <Grid VerticalOptions="FillAndExpand">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
 
-                            </Grid.RowDefinitions>
+                                    </Grid.RowDefinitions>
 
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="20*"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-                            
-                            <Label Text="Pórixma Clase: " TextColor="White"
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="20*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Text="Pórixma Clase: " TextColor="White"
                                    Grid.Column="0" Grid.Row="0"
                                    FontSize="Micro"
                                    VerticalOptions="CenterAndExpand"
                                    HorizontalOptions="StartAndExpand"
                                    />
 
-                            <Label Text="Profesor: " TextColor="White"
+                                    <Label Text="Profesor: " TextColor="White"
                                    Grid.Column="0" Grid.Row="1"
                                    FontSize="Micro"
                                    VerticalOptions="CenterAndExpand"
                                    HorizontalOptions="Start"
                                    />
 
-                            <Label Text="Lugar: " TextColor="White"
+                                    <Label Text="Lugar: " TextColor="White"
                                    Grid.Column="0" Grid.Row="2"
                                    FontSize="Micro"
                                    VerticalOptions="CenterAndExpand"
                                    HorizontalOptions="Start"
                                    />
 
-                            <!--generar bindings-->
-                            <Label Text="19:00 Hrs" TextColor="White"
+                                    <!--generar bindings-->
+                                    <Label Text="19:00 Hrs" TextColor="White"
                                    Grid.Column="1" Grid.Row="0"
                                    FontSize="Micro"
                                    VerticalOptions="CenterAndExpand"
                                    HorizontalOptions="EndAndExpand"
                                    />
 
-                            <Label Text="Diego Saavedra" TextColor="White"
+                                    <Label Text="Diego Saavedra" TextColor="White"
                                    Grid.Column="1" Grid.Row="1"
                                    FontSize="Micro"
                                    VerticalOptions="CenterAndExpand"
                                    HorizontalOptions="CenterAndExpand"
                                    />
 
-                            <Label Text="Piscina Exterior" TextColor="White"
+                                    <Label Text="Piscina Exterior" TextColor="White"
                                    Grid.Column="1" Grid.Row="2"
                                    FontSize="Micro"
                                    VerticalOptions="CenterAndExpand"
                                    HorizontalOptions="Center"
                                    />
-                        </Grid>
-                        
-                        <!--<Button Text="Confirmar Asistencia" 
+                                </Grid>
+
+                                <!--<Button Text="Confirmar Asistencia" 
                                 FontSize="Micro"   
                                 BorderColor="White" 
                                 BorderWidth="1" CornerRadius="5" 
@@ -126,95 +123,164 @@
                                 Command="{Binding InscriptionFormCommand}"
                                 Margin="0,20"
                                 />-->
-                    </StackLayout>
+                            </StackLayout>
 
-                    <StackLayout Grid.Row="2" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <StackLayout Grid.Row="2" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="20*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Text="Pórixma Clase: " TextColor="White"
+                                   Grid.Column="0" Grid.Row="0"
+                                   FontSize="Micro"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="StartAndExpand"
+                                   />
+
+                                    <Label Text="Profesor: " TextColor="White"
+                                   Grid.Column="0" Grid.Row="1"
+                                   FontSize="Micro"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="Start"
+                                   />
+
+                                    <Label Text="Lugar: " TextColor="White"
+                                   Grid.Column="0" Grid.Row="2"
+                                   FontSize="Micro"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="Start"
+                                   />
+
+                                    <!--generar bindings-->
+                                    <Label Text="19:00 Hrs" TextColor="White"
+                                   Grid.Column="1" Grid.Row="0"
+                                   FontSize="Micro"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="EndAndExpand"
+                                   />
+
+                                    <Label Text="Moises Rocco" TextColor="White"
+                                   Grid.Column="1" Grid.Row="1"
+                                   FontSize="Micro"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="CenterAndExpand"
+                                   />
+
+                                    <Label Text="Piscina Olimpica" TextColor="White"
+                                   Grid.Column="1" Grid.Row="2"
+                                   FontSize="Micro"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="Center"
+                                   />
+                                </Grid>
+                            </StackLayout>
+                        </Grid>
+
+                        <Button Text="Ver todos los Horarios" 
+                                    FontSize="Micro"   
+                                    BorderColor="White" 
+                                    BorderWidth="1" CornerRadius="5" 
+                                    TextColor="White" BackgroundColor="Black" 
+                                    Grid.Row="0" Grid.Column="1"  
+                                    Command="{Binding ScheduleCommand}"
+                                    Margin="0,20"
+                                    FontFamily="{OnPlatform Android='HARDCORE-POSTER.otf#HARDCORE-POSTER'}"
+                                    />
+
+                    </StackLayout>
+                </Frame>
+
+                <Frame Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="30,0,30,0" CornerRadius="10" BackgroundColor="#FF041326" Opacity="0.6" BorderColor="White">
+                    <StackLayout Spacing="30">
+                        <Label Text=" Proximos Eventos "
+                               TextColor="White" FontSize="20" 
+                               VerticalOptions="CenterAndExpand" 
+                               HorizontalOptions="CenterAndExpand" 
+                               FontFamily="{OnPlatform Android='HARDCORE-POSTER.otf#HARDCORE-POSTER'}"/>
+
+                        <!--Pondré 3 eventos estaticos, despues generaré un motor que haga esto de manera dinamica-->
                         <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-
-                            </Grid.RowDefinitions>
-
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding FinswimmingRegistrationFormCommand}"/>
+                            </Grid.GestureRecognizers>
+                            
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="20*"/>
-                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="30*"/>
+                                <ColumnDefinition Width="70*"/>
                             </Grid.ColumnDefinitions>
 
-                            <Label Text="Pórixma Clase: " TextColor="White"
-                                   Grid.Column="0" Grid.Row="0"
+                            <Frame Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="50" BackgroundColor="White"/>
+                            <StackLayout Grid.Column="1" VerticalOptions="Center">
+                                <Label Text="6to Campeonato Nacional - Apnea"
+                                   TextColor="White" 
+                                   FontAttributes="Bold"
                                    FontSize="Micro"
-                                   VerticalOptions="CenterAndExpand"
-                                   HorizontalOptions="StartAndExpand"
+                                   HorizontalOptions="CenterAndExpand" 
+                                   VerticalOptions="Center"
                                    />
-
-                            <Label Text="Profesor: " TextColor="White"
-                                   Grid.Column="0" Grid.Row="1"
-                                   FontSize="Micro"
-                                   VerticalOptions="CenterAndExpand"
-                                   HorizontalOptions="Start"
-                                   />
-
-                            <Label Text="Lugar: " TextColor="White"
-                                   Grid.Column="0" Grid.Row="2"
-                                   FontSize="Micro"
-                                   VerticalOptions="CenterAndExpand"
-                                   HorizontalOptions="Start"
-                                   />
-
-                            <!--generar bindings-->
-                            <Label Text="19:00 Hrs" TextColor="White"
-                                   Grid.Column="1" Grid.Row="0"
-                                   FontSize="Micro"
-                                   VerticalOptions="CenterAndExpand"
-                                   HorizontalOptions="EndAndExpand"
-                                   />
-
-                            <Label Text="Moises Rocco" TextColor="White"
-                                   Grid.Column="1" Grid.Row="1"
-                                   FontSize="Micro"
-                                   VerticalOptions="CenterAndExpand"
-                                   HorizontalOptions="CenterAndExpand"
-                                   />
-
-                            <Label Text="Piscina Olimpica" TextColor="White"
-                                   Grid.Column="1" Grid.Row="2"
-                                   FontSize="Micro"
-                                   VerticalOptions="CenterAndExpand"
-                                   HorizontalOptions="Center"
-                                   />
+                                
+                            </StackLayout>
                         </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30*"/>
+                                <ColumnDefinition Width="70*"/>
+                            </Grid.ColumnDefinitions>
 
-                        <!--<Button Text="Confirmar Asistencia" 
-                                FontSize="Micro"   
-                                BorderColor="White" 
-                                BorderWidth="1" CornerRadius="5" 
-                                TextColor="White" BackgroundColor="Black" 
-                                Grid.Row="0" Grid.Column="1"  
-                                Command="{Binding InscriptionFormCommand}"
-                                Margin="0,20"
-                                />-->
+                            <Frame Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="50" BackgroundColor="White"/>
+                            <StackLayout Grid.Column="1" VerticalOptions="Center">
+                                <Label Text="6to Campeonato Nacional - Natación con Aletas"
+                                   TextColor="White" 
+                                   FontAttributes="Bold"
+                                   FontSize="Micro"
+                                   HorizontalOptions="CenterAndExpand" 
+                                   VerticalOptions="Center"
+                                   />
+
+                            </StackLayout>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30*"/>
+                                <ColumnDefinition Width="70*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Frame Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="50" BackgroundColor="White"/>
+                            <StackLayout Grid.Column="1" VerticalOptions="Center">
+                                <Label Text="Apnea en Isla de Pascua"
+                                   TextColor="White" 
+                                   FontAttributes="Bold"
+                                   FontSize="Micro"
+                                   HorizontalOptions="CenterAndExpand" 
+                                   VerticalOptions="Center"
+                                  />
+
+                            </StackLayout>
+                        </Grid>
+                        <!--fin codigo duro--> 
+                        
+                        <Button Text="Ver todos los Eventos" 
+                                    FontSize="Micro"   
+                                    BorderColor="White" 
+                                    BorderWidth="1" CornerRadius="5" 
+                                    TextColor="White" BackgroundColor="Black" 
+                                    Grid.Row="0" Grid.Column="1"  
+                                    Command="{Binding ScheduleCommand}"
+                                    Margin="0,20"
+                                    FontFamily="{OnPlatform Android='HARDCORE-POSTER.otf#HARDCORE-POSTER'}"
+                                    />
                     </StackLayout>
-                </Grid>
-
-
-            </Frame>
-
-            <Frame Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="30,0,30,0" CornerRadius="10" BackgroundColor="#FF041326" Opacity="0.6" BorderColor="White">
-                <Button Text="Ver todos los Horarios" 
-                        FontSize="Medium"   
-                        BorderColor="White" 
-                        BorderWidth="1" CornerRadius="5" 
-                        TextColor="White" BackgroundColor="Black" 
-                        Grid.Row="0" Grid.Column="1"  
-                        Command="{Binding ScheduleCommand}"
-                        Margin="0,20"
-                        FontFamily="{OnPlatform Android='HARDCORE-POSTER.otf#HARDCORE-POSTER'}"
-                        >
-                </Button>
-            </Frame>
-
-        </Grid>
+                </Frame>
+            </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
