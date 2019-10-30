@@ -2,9 +2,60 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Apnoiapp.Views.MenuPage"
-             Title="Menu">
-    <StackLayout VerticalOptions="FillAndExpand">
+             Title="Menu" BackgroundColor="Transparent">
+    <Grid VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="60*"/>
+        </Grid.RowDefinitions>
+
+        <Frame Grid.Row="0" 
+               BackgroundColor="DarkKhaki"
+               CornerRadius="20" Padding="0" Margin="0">
+
+            <RelativeLayout >
+                <!--fondo-->
+                <Image Source="gradient2.jpg"  Aspect="Fill"/>
+
+                <Image Source="Apneista.png" Aspect="Fill" HeightRequest="40" Scale="0.7"                        
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.6, Constant=0}"/>
+
+                <Frame VerticalOptions="Center" HorizontalOptions="Center" CornerRadius="50" 
+                       HeightRequest="60" WidthRequest="60"
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.120, Constant=0}"
+                       RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.189, Constant=0}">
+                    
+                    <Image Source="moai3.png"/>
+                    
+                </Frame>
+
+                <Label Text="Andreas Benjamin Valero Galarce" FontFamily="{OnPlatform Android='HARDCORE-POSTER.otf#HARDCORE-POSTER'}" TextColor="White"
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.1, Constant=0}"
+                       RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.7, Constant=0}"/>
+
+
+                <Frame Opacity="0.9" Scale="0.5" CornerRadius="40" BackgroundColor="DarkBlue"
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0, Constant=120}"
+                       RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.7, Constant=0}">
+                    <StackLayout Orientation="Horizontal" Scale="0.9">
+                        <Label Text="Licencias: " FontSize="Small" TextColor="White"/>
+                        <StackLayout>
+                            <Label Text="CHI/F00/PL1/17/00002/N" FontSize="Micro" TextColor="White"/>
+                            <Label Text="CHI/F00/PL1/17/00002/N" FontSize="Micro" TextColor="White"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+
+            </RelativeLayout>
+                        
+        </Frame>
+        
+        <Frame Grid.Row="1"
+               Margin="0,-3,0,0"/>
+
         <ListView x:Name="ListViewMenu"
+                  Grid.Row="1"
                     HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -18,5 +69,5 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </StackLayout>
+    </Grid>
 </ContentPage>

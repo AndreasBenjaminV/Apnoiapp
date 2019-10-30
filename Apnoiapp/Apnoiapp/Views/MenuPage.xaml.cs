@@ -31,6 +31,13 @@ namespace Apnoiapp.Views
                 if (e.SelectedItem == null)
                     return;
 
+                if (((HomeMenuItem)e.SelectedItem).Id == 0) //selecciona volver al home
+                {
+                    await RootPage.Detail.Navigation.PopToRootAsync();
+                    RootPage.IsPresented = false;
+                    return;
+                }
+
                 var id = (int)((HomeMenuItem)e.SelectedItem).Id;
                 await RootPage.NavigateFromMenu(id);
             };
