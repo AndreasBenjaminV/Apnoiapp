@@ -200,7 +200,7 @@
                 </Frame>
 
                 <Frame Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="30,0,30,0" CornerRadius="10" BackgroundColor="#FF041326" Opacity="0.6" BorderColor="White">
-                    <StackLayout Spacing="30">
+                    <StackLayout Spacing="15">
                         <Label Text=" Proximos Eventos "
                                TextColor="White" FontSize="20" 
                                VerticalOptions="CenterAndExpand" 
@@ -209,63 +209,84 @@
 
                         <!--Pondré 3 eventos estaticos, despues generaré un motor que haga esto de manera dinamica-->
                         <Grid>
-                            <Grid.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding FinswimmingRegistrationFormCommand}"/>
-                            </Grid.GestureRecognizers>
-                            
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="80"></RowDefinition>
+                                <RowDefinition Height="80"></RowDefinition>
+                                <RowDefinition Height="80"></RowDefinition>
+                            </Grid.RowDefinitions>
+
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="30*"/>
                                 <ColumnDefinition Width="70*"/>
                             </Grid.ColumnDefinitions>
 
-                            <Frame Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="50" BackgroundColor="White"/>
+                            <Frame Grid.Row="0" Grid.Column="0" 
+                                   HorizontalOptions="Center" VerticalOptions="Center" 
+                                   CornerRadius="50" BorderColor="White" BackgroundColor="Black">
+                                <Image Source="finswimming3.png"/>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding FinswimmingRegistrationFormCommand}"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
                             <StackLayout Grid.Column="1" VerticalOptions="Center">
+                                <Label Text="6to Campeonato Nacional - Natación con aletas"
+                                       HorizontalTextAlignment="Center"
+                                       TextColor="White" 
+                                       FontAttributes="Bold"
+                                       FontSize="Micro"
+                                       HorizontalOptions="CenterAndExpand" 
+                                       VerticalOptions="Center"
+                                   />
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding FinswimmingRegistrationFormCommand}"/>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+
+                            <Frame Grid.Row="1" Grid.Column="0" 
+                                   HorizontalOptions="Center" VerticalOptions="Center" 
+                                   CornerRadius="50" BackgroundColor="White">
+                                <Image Source="mariposaagualogo.png"/>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding FinswimmingRegistrationFormCommand}"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                            <StackLayout Grid.Row="1" Grid.Column="1"  
+                                         VerticalOptions="Center">
                                 <Label Text="6to Campeonato Nacional - Apnea"
-                                   TextColor="White" 
-                                   FontAttributes="Bold"
-                                   FontSize="Micro"
-                                   HorizontalOptions="CenterAndExpand" 
-                                   VerticalOptions="Center"
+                                       TextColor="White" 
+                                       FontAttributes="Bold"
+                                       FontSize="Micro"
+                                       HorizontalOptions="CenterAndExpand" 
+                                       VerticalOptions="Center"
                                    />
-                                
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding FinswimmingRegistrationFormCommand}"/>
+                                </StackLayout.GestureRecognizers>
                             </StackLayout>
-                        </Grid>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="30*"/>
-                                <ColumnDefinition Width="70*"/>
-                            </Grid.ColumnDefinitions>
 
-                            <Frame Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="50" BackgroundColor="White"/>
-                            <StackLayout Grid.Column="1" VerticalOptions="Center">
-                                <Label Text="6to Campeonato Nacional - Natación con Aletas"
-                                   TextColor="White" 
-                                   FontAttributes="Bold"
-                                   FontSize="Micro"
-                                   HorizontalOptions="CenterAndExpand" 
-                                   VerticalOptions="Center"
-                                   />
-
-                            </StackLayout>
-                        </Grid>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="30*"/>
-                                <ColumnDefinition Width="70*"/>
-                            </Grid.ColumnDefinitions>
-
-                            <Frame Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="50" BackgroundColor="White"/>
-                            <StackLayout Grid.Column="1" VerticalOptions="Center">
+                            <Frame Grid.Row="2" Grid.Column="0" 
+                                   HorizontalOptions="Center" VerticalOptions="Center"
+                                   CornerRadius="50" BackgroundColor="White">
+                                <Image Source="moai3.png"/>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding FinswimmingRegistrationFormCommand}"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                            <StackLayout Grid.Row="2" Grid.Column="1"
+                                         VerticalOptions="Center">
                                 <Label Text="Apnea en Isla de Pascua"
-                                   TextColor="White" 
-                                   FontAttributes="Bold"
-                                   FontSize="Micro"
-                                   HorizontalOptions="CenterAndExpand" 
-                                   VerticalOptions="Center"
-                                  />
-
+                                       TextColor="White" 
+                                       FontAttributes="Bold"
+                                       FontSize="Micro"
+                                       HorizontalOptions="CenterAndExpand" 
+                                       VerticalOptions="Center"
+                                   />
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding FinswimmingRegistrationFormCommand}"/>
+                                </StackLayout.GestureRecognizers>
                             </StackLayout>
                         </Grid>
+
                         <!--fin codigo duro--> 
                         
                         <Button Text="Ver todos los Eventos" 
