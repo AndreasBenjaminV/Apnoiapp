@@ -245,7 +245,7 @@
                             <Frame Grid.Row="1" Grid.Column="0" 
                                    HorizontalOptions="Center" VerticalOptions="Center" 
                                    CornerRadius="50" BackgroundColor="White">
-                                <Image Source="mariposaagualogo.png"/>
+                                <Image Source="freedive.jpg" Aspect="AspectFit"/>
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding FinswimmingRegistrationFormCommand}"/>
                                 </Frame.GestureRecognizers>
@@ -295,7 +295,7 @@
                                     BorderWidth="1" CornerRadius="5" 
                                     TextColor="White" BackgroundColor="Black" 
                                     Grid.Row="0" Grid.Column="1"  
-                                    Command="{Binding ScheduleCommand}"
+                                    Command="{Binding GoToEventsPageCommand}"
                                     Margin="0,20"
                                     FontFamily="{OnPlatform Android='HARDCORE-POSTER.otf#HARDCORE-POSTER'}"
                                     />

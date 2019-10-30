@@ -21,6 +21,9 @@ namespace Apnoiapp.Droid
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
+
+            //Change the Status Bar Color
+            Window.SetStatusBarColor(Android.Graphics.Color.Argb(255, 0, 0, 0));
         }
     }
 }
